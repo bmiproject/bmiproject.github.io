@@ -76,6 +76,6 @@ export default {
 };
 </script>
 <style>
-	body { color: #555555; }
+	body, p { color: #555555; font-size: 16px; }
 	.no-flex { flex: none !important }
 </style>

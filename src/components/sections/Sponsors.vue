@@ -1,6 +1,6 @@
 <template>
     <v-responsive 
-        class="no-flex mx-auto mt-5" 
+        class="no-flex mx-auto my-15" 
         max-width="800px" 
         align="center"
     >
