@@ -43,7 +43,7 @@ export default {
 </script>
 <style scoped>
     h3 { font-size: 36px }
-    .v-expansion-panel-header { font-size: 20px; font-weight: 300; }
+    .v-expansion-panel-header { font-size: 20px; font-weight: 300; padding-top: 20px; padding-bottom: 20px; }
     .v-expansion-panel--active.v-item--active { margin-top: 20px; margin-bottom: 20px; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
 border-radius: 5px; }
 </style>
