@@ -23,7 +23,7 @@
                                 >
                                     UVP Title Headline Here
                                 </span>
-                                <p class="mt-5 font-weight-light mx-auto" style="max-width: 900px">
+                                <p class="mt-5 font-weight-light mx-auto text-white" style="max-width: 900px">
                                     Turpis semper in iaculis eget turpis felis, cum rutrum. Quisque ac massa amet rutrum a, etiam porttitor. Elit, id turpis sit lectus nisl.
                                 </p>
                             </v-col>
@@ -39,3 +39,6 @@ export default {
     name: 'hero-section'
 }
 </script>
+<style scoped>
+    p { color: #fff; font-size: 24px; line-height: 35px; }
+</style>
