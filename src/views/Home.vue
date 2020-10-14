@@ -5,6 +5,7 @@
 		<sponsors-section />
 		<services-section />
 		<whats-great-section />
+		<faq-section />
 	</div>
 </template>
 
@@ -14,6 +15,7 @@ import MarketplaysApplicationsSection from '@/components/sections/MarketplaysApp
 import SponsorsSection from '@/components/sections/Sponsors'
 import ServicesSection from '@/components/sections/Services'
 import WhatsGreatSection from '@/components/sections/WhatsGreat'
+import FaqSection from '@/components/sections/Faq'
 
 export default {
 	name: 'Home',
@@ -23,6 +25,7 @@ export default {
 		SponsorsSection,
 		ServicesSection,
 		WhatsGreatSection,
+		FaqSection,
 	}
 }
 </script>
