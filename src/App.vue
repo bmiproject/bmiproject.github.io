@@ -2,30 +2,31 @@
 	<v-app>
 		<v-responsive 
 			width="1300px" 
-			min-height="100px"
-			class="mx-auto">
+			height="100px"
+			class="mx-auto no-flex"
+			style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)"
+		>
 			<v-toolbar 
 				flat
-				class="py-3"
+				class="py-5"
 			>
 				<v-app-bar-nav-icon class="d-sm-none"></v-app-bar-nav-icon>
 				<v-toolbar-title>
 					<a href="/">
 						<v-img
 							alt="BMI Logo"
-							class="shrink mr-2"
 							contain
 							src="../src/assets/logo.png"
 							width="345px"
 						/>
 					</a>
 				</v-toolbar-title>
-						<v-spacer></v-spacer>
-				<v-row align="center"> 
+				<v-spacer></v-spacer>
+				<v-row class="my-auto" no-gutters> 
 					<v-col lg="5">
 						<v-text-field
 							clear-icon="mdi-magnify"
-							class="rounded mt-6"
+							class="rounded"
 							dense
 							outlined
 							placeholder="Search"
@@ -73,3 +74,6 @@ export default {
 	}),
 };
 </script>
+<style>
+	.no-flex { flex: none !important }
+</style>
