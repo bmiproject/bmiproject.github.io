@@ -1,60 +1,75 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+	<v-app>
+		<v-responsive 
+			width="1300px" 
+			min-height="100px"
+			class="mx-auto">
+			<v-toolbar 
+				flat
+				class="py-3"
+			>
+				<v-app-bar-nav-icon class="d-sm-none"></v-app-bar-nav-icon>
+				<v-toolbar-title>
+					<a href="/">
+						<v-img
+							alt="BMI Logo"
+							class="shrink mr-2"
+							contain
+							src="../src/assets/logo.png"
+							width="345px"
+						/>
+					</a>
+				</v-toolbar-title>
+						<v-spacer></v-spacer>
+				<v-row align="center"> 
+					<v-col lg="5">
+						<v-text-field
+							clear-icon="mdi-magnify"
+							class="rounded mt-6"
+							dense
+							outlined
+							placeholder="Search"
+						>
+							<template slot="append">
+								<v-icon color="#BE1E2D">mdi-magnify</v-icon>
+							</template>
+						</v-text-field>
+					</v-col>
+					<v-col 
+						class="text-right"
+						lg="7"
+					>
+						<v-btn 
+							class="topmenu-link text-capitalize"
+							:key="item.name"
+							:to="item.link"
+							text
+							v-for="item in topMenu"
+							v-html="item.label"
+						></v-btn>
+						<v-btn class="ml-2" color="primary">
+							Sign Up
+						</v-btn>
+					</v-col>
+				</v-row>
+			</v-toolbar>
+		</v-responsive>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
+		<v-main>
+			<router-view></router-view>
+		</v-main>
+	</v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
+	name: 'App',
+	data: () => ({
+		topMenu: [
+			{ name: 'how-it-works', label: 'How it works' },
+			{ name: 'solutions', label: 'Solutions' },
+			{ name: 'login', label: 'Login', link: 'login' },
+		]
+	}),
 };
 </script>
