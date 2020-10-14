@@ -1,60 +1,61 @@
 <template>
 	<v-app>
-		<v-responsive 
-			width="1300px" 
-			height="100px"
-			class="mx-auto no-flex"
-			style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)"
-		>
-			<v-toolbar 
-				flat
-				class="py-5"
+		<header style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)">
+			<v-responsive 
+				width="1300px" 
+				height="100px"
+				class="mx-auto no-flex"
 			>
-				<v-app-bar-nav-icon class="d-sm-none"></v-app-bar-nav-icon>
-				<v-toolbar-title>
-					<a href="/">
-						<v-img
-							alt="BMI Logo"
-							contain
-							src="../src/assets/logo.png"
-							width="345px"
-						/>
-					</a>
-				</v-toolbar-title>
-				<v-spacer></v-spacer>
-				<v-row class="my-auto" no-gutters> 
-					<v-col lg="5">
-						<v-text-field
-							clear-icon="mdi-magnify"
-							class="rounded"
-							dense
-							outlined
-							placeholder="Search"
+				<v-toolbar 
+					flat
+					class="py-5"
+				>
+					<v-app-bar-nav-icon class="d-sm-none"></v-app-bar-nav-icon>
+					<v-toolbar-title>
+						<a href="/">
+							<v-img
+								alt="BMI Logo"
+								contain
+								src="../src/assets/logo.png"
+								width="345px"
+							/>
+						</a>
+					</v-toolbar-title>
+					<v-spacer></v-spacer>
+					<v-row class="my-auto" no-gutters> 
+						<v-col lg="5">
+							<v-text-field
+								clear-icon="mdi-magnify"
+								class="rounded"
+								dense
+								outlined
+								placeholder="Search"
+							>
+								<template slot="append">
+									<v-icon color="#BE1E2D">mdi-magnify</v-icon>
+								</template>
+							</v-text-field>
+						</v-col>
+						<v-col 
+							class="text-right"
+							lg="7"
 						>
-							<template slot="append">
-								<v-icon color="#BE1E2D">mdi-magnify</v-icon>
-							</template>
-						</v-text-field>
-					</v-col>
-					<v-col 
-						class="text-right"
-						lg="7"
-					>
-						<v-btn 
-							class="topmenu-link text-capitalize"
-							:key="item.name"
-							:to="item.link"
-							text
-							v-for="item in topMenu"
-							v-html="item.label"
-						></v-btn>
-						<v-btn class="ml-2" color="primary">
-							Sign Up
-						</v-btn>
-					</v-col>
-				</v-row>
-			</v-toolbar>
-		</v-responsive>
+							<v-btn 
+								class="topmenu-link text-capitalize"
+								:key="item.name"
+								:to="item.link"
+								text
+								v-for="item in topMenu"
+								v-html="item.label"
+							></v-btn>
+							<v-btn class="ml-2" color="primary">
+								Sign Up
+							</v-btn>
+						</v-col>
+					</v-row>
+				</v-toolbar>
+			</v-responsive>
+		</header>
 
 		<v-main>
 			<router-view></router-view>
@@ -75,5 +76,6 @@ export default {
 };
 </script>
 <style>
+	body { color: #555555; }
 	.no-flex { flex: none !important }
 </style>
