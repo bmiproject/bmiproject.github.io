@@ -1,103 +1,102 @@
 <template>
-    <footer 
-        id="footer"
-        color="#ffffff"
-    >
-        <section id="top-footer">
-            <v-responsive
-                class="no-flex mx-auto py-5 px-10 footer-top-wrapper"
-                :max-width="containerSize"
-                height="135px"
-            >
-                <v-row>
-                    <v-col md="7" class="white--text">
-                        <p class="white--text">Fames lectus id nibh venenatis egestas in arcu arcu ac</p>
-                        <h4>Try Bickert Management Inc. Marketplace</h4>
-                    </v-col>
-                    <v-col 
-                        md="5"
-                        class="text-right"
-                        align-self="center"
-                    >
-                        <v-btn
-                            color="white"
-                            style="color: #BE1E2D"
-                            depressed
-                            large
+    <footer id="footer">
+        <div class="footer-cont">
+            <section id="footer-top">
+                <v-responsive
+                    class="no-flex mx-auto py-5 px-10 footer-top-wrapper"
+                    :max-width="containerSize"
+                    height="135px"
+                >
+                    <v-row>
+                        <v-col md="7" class="white--text">
+                            <p class="white--text">Fames lectus id nibh venenatis egestas in arcu arcu ac</p>
+                            <h4>Try Bickert Management Inc. Marketplace</h4>
+                        </v-col>
+                        <v-col 
+                            md="5"
+                            class="text-right"
+                            align-self="center"
                         >
-                            How it Works
-                        </v-btn>
-                        <v-btn 
-                            class="ml-2"
-                            outlined
-                            color="white"
-                            large
-                        >Contact Us</v-btn>
-                    </v-col>
-                </v-row>
-            </v-responsive>
-        </section>
-        <section 
-            id="middle-footer"
-            class="mt-5"
-        >
-            <v-responsive
-                class="no-flex mx-auto py-5 px-3 footer-middle-wrapper"
-                :max-width="containerSize"
-            >
-                <v-row>
-                    <v-col md="5">
-                        <v-img src="../../assets/logo.png" max-width="345px"></v-img>
-                        <p class="mt-5 mb-7">
-                            Nec sit facilisi sagittis, ipsum enim. Morbi consequat<br>
-                            amet, vulputate ac sit pulvinar iaculis bibendum mattis.<br>
-                            Duis amet, eget quis tristique.</p>
-                        
-                        <a 
-                            v-for="(item, index) in socialMedia"
-                            :key="index"
-                            :href="item.link"
-                            class="d-inline-block mr-2"
-                        >
-                            <v-img :src="item.icon" width="42px"></v-img>
-                        </a>
-                    </v-col>
-                    <v-col md="3">
-                        <h5 class="mb-5">Navigate</h5>
-                        <ul class="pl-0">
-                            <li
-                                class="mb-3"
-                                v-for="(item, index) in navigateLinks" 
-                                :key="index"
+                            <v-btn
+                                color="white"
+                                style="color: #BE1E2D"
+                                depressed
+                                large
                             >
-                                <a class="text-decoration-none" :href="item.link" v-text="item.title"></a>
-                            </li>
-                        </ul>
-                    </v-col>
-                    <v-col md="3">
-                        <h5 class="mb-5">Browse</h5>
-                        <ul class="pl-0">
-                            <li
-                                class="mb-3"
-                                v-for="(item, index) in navigateLinks" 
-                                :key="index"
-                            >
-                                <a class="text-decoration-none" :href="item.link" v-text="item.title"></a>
-                            </li>
-                        </ul>
-                    </v-col>
-                </v-row>
-            </v-responsive>
-        </section>
-        <section id="footer-bottom">
-            <v-responsive
-                class="no-flex mx-auto py-5 px-3 footer-bottom-wrapper"
-                :max-width="containerSize"
+                                How it Works
+                            </v-btn>
+                            <v-btn 
+                                class="ml-2"
+                                outlined
+                                color="white"
+                                large
+                            >Contact Us</v-btn>
+                        </v-col>
+                    </v-row>
+                </v-responsive>
+            </section>
+            <section 
+                id="footer-middle"
+                class="pt-5"
             >
-                <v-divider class="mb-5"></v-divider>
-                <p class="text-center">&copy; Copyright {{ (new Date()).getFullYear() }} - Bickert Management Inc. Marketplace. All right reserved.</p>
-            </v-responsive>
-        </section>
+                <v-responsive
+                    class="no-flex mx-auto py-5 px-3 footer-middle-wrapper"
+                    :max-width="containerSize"
+                >
+                    <v-row>
+                        <v-col md="5">
+                            <v-img src="../../assets/logo.png" max-width="345px"></v-img>
+                            <p class="mt-5 mb-7">
+                                Nec sit facilisi sagittis, ipsum enim. Morbi consequat<br>
+                                amet, vulputate ac sit pulvinar iaculis bibendum mattis.<br>
+                                Duis amet, eget quis tristique.</p>
+                            
+                            <a 
+                                v-for="(item, index) in socialMedia"
+                                :key="index"
+                                :href="item.link"
+                                class="d-inline-block mr-2"
+                            >
+                                <v-img :src="item.icon" width="42px"></v-img>
+                            </a>
+                        </v-col>
+                        <v-col md="3">
+                            <h5 class="mb-5">Navigate</h5>
+                            <ul class="pl-0">
+                                <li
+                                    class="mb-3"
+                                    v-for="(item, index) in navigateLinks" 
+                                    :key="index"
+                                >
+                                    <a class="text-decoration-none" :href="item.link" v-text="item.title"></a>
+                                </li>
+                            </ul>
+                        </v-col>
+                        <v-col md="3">
+                            <h5 class="mb-5">Browse</h5>
+                            <ul class="pl-0">
+                                <li
+                                    class="mb-3"
+                                    v-for="(item, index) in navigateLinks" 
+                                    :key="index"
+                                >
+                                    <a class="text-decoration-none" :href="item.link" v-text="item.title"></a>
+                                </li>
+                            </ul>
+                        </v-col>
+                    </v-row>
+                </v-responsive>
+            </section>
+            <section id="footer-bottom">
+                <v-responsive
+                    class="no-flex mx-auto py-5 px-3 footer-bottom-wrapper"
+                    :max-width="containerSize"
+                >
+                    <v-divider class="mb-5"></v-divider>
+                    <p class="text-center">&copy; Copyright {{ (new Date()).getFullYear() }} - Bickert Management Inc. Marketplace. All right reserved.</p>
+                </v-responsive>
+            </section>
+        </div>
     </footer>
 </template>
 <script>
@@ -125,6 +124,8 @@ export default {
 }
 </script>
 <style scoped>
+    .footer-cont { position: relative; }
+    .footer-cont:before { content: ''; position: absolute; width: 100%; height: 60px; display: block; background: #f5f5f5; }
     p { margin-bottom: 0; font-size: 14px; }
     .footer-top-wrapper { background: linear-gradient(225deg, #E25405 0%, #CA0316 100%), #FFFFFF; border-radius: 5px; }
     ul { list-style: none; }
