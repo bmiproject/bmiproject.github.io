@@ -1,54 +1,56 @@
 <template>
-    <v-responsive 
-        class="no-flex mx-auto mt-n10" 
-        max-width="1300px"
-    >
-        <v-container 
-            class="mt-n3"
-            fluid
+    <section id="marketplays-applications-section">
+        <v-responsive 
+            class="no-flex mx-auto mt-n10" 
+            :max-width="containerSize"
         >
-            <v-row>
-                <v-col 
-                    :key="item.name"
-                    md="3"
-                    v-for="item in applicationList"
-                >
-                    <v-hover v-slot:default="{ hover }">
-                        <v-card 
-                            outlined
-                            class="py-2"
-                            :style="hover ? 'background: linear-gradient(225deg, #E25405 0%, #CA0316 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF); cursor: pointer;' : ''"
-                            to="login"
-                        >
-                            <v-card-title >
-                                <h5 :class="{ 'font-weight-light d-block': true, 'white--text': hover }">
-                                    {{ item.title }}
-                                </h5>
-                            </v-card-title>
-                            <v-divider class="mx-4 mb-2"></v-divider>
-                            <v-card-text>
-                                <p 
-                                    :class="{ 'white--text': hover }" 
-                                    style="max-width: 235px" 
-                                    v-html="item.content"
-                                ></p>
-                            </v-card-text>
-                            <v-card-actions>
-                                <v-btn 
-                                    :class="{ 'font-weight-bold': true, 'white--text': hover }"
-                                    :color="hover ? 'white' : 'primary'"
-                                    text
-                                    v-html="item.btnLabel"
-                                    light
-                                >
-                                </v-btn>
-                            </v-card-actions>
-                        </v-card>
-                    </v-hover>
-                </v-col>
-            </v-row>
-        </v-container>  
-    </v-responsive>
+            <v-container 
+                class="mt-n3"
+                fluid
+            >
+                <v-row>
+                    <v-col 
+                        :key="item.name"
+                        md="3"
+                        v-for="item in applicationList"
+                    >
+                        <v-hover v-slot:default="{ hover }">
+                            <v-card 
+                                outlined
+                                class="py-2"
+                                :style="hover ? 'background: linear-gradient(225deg, #E25405 0%, #CA0316 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF); cursor: pointer;' : ''"
+                                to="login"
+                            >
+                                <v-card-title >
+                                    <h5 :class="{ 'font-weight-light d-block': true, 'white--text': hover }">
+                                        {{ item.title }}
+                                    </h5>
+                                </v-card-title>
+                                <v-divider class="mx-4 mb-2"></v-divider>
+                                <v-card-text>
+                                    <p 
+                                        :class="{ 'white--text': hover }" 
+                                        style="max-width: 235px" 
+                                        v-html="item.content"
+                                    ></p>
+                                </v-card-text>
+                                <v-card-actions>
+                                    <v-btn 
+                                        :class="{ 'font-weight-bold': true, 'white--text': hover }"
+                                        :color="hover ? 'white' : 'primary'"
+                                        text
+                                        v-html="item.btnLabel"
+                                        light
+                                    >
+                                    </v-btn>
+                                </v-card-actions>
+                            </v-card>
+                        </v-hover>
+                    </v-col>
+                </v-row>
+            </v-container>  
+        </v-responsive>
+    </section>
 </template>
 <script>
 export default {

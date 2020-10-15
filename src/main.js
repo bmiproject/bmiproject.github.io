@@ -7,6 +7,9 @@ import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false
 
+import UtilsMixin from '@/mixins/Utils.js'
+Vue.mixin(UtilsMixin)
+
 new Vue({
   router,
   store,

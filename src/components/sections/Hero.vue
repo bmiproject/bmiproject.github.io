@@ -1,5 +1,5 @@
 <template>
-    <section id="hero">
+    <section id="hero-section">
         <v-row no-gutters>
             <v-img
                 gradient="to top right, rgba(17, 17, 17, 0.6), rgba(17, 17, 17, 0.6)"

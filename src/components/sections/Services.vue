@@ -1,13 +1,13 @@
 <template>
-    <div id="sections">
+    <section id="services-section">
         <div
-            class="sections-wrapper py-10"
+            class="services-wrapper py-10"
             v-for="(item, index) in servicesRow"
             :key="index"
             :style="'background: ' + (item.bgColor ? item.bgColor : '#FFFFFF')"
         >
             <v-responsive 
-                max-width="1300px"
+                :max-width="containerSize"
                 class="no-flex mx-auto"
             >
                 <v-row>
@@ -54,7 +54,7 @@
                 </v-row>
             </v-responsive>
         </div>
-    </div>
+    </section>
     
 </template>
 <script>
