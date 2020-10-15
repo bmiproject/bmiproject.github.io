@@ -21,6 +21,7 @@ export default {
 </script>
 <style>
 	body, p { color: #555555; font-size: 16px; }
+	body { background: #E5E5E5; }
 	h1, h2, h3, h4, h5, h6 { font-family: Roboto; font-style: normal; font-weight: 300; letter-spacing: -0.01em; }
 	h1 { font-size: 60px; line-height: 70px; }
 	h2 { font-size: 48px; line-height: 56px; }
