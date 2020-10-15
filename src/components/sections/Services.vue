@@ -28,7 +28,7 @@
                                 <h2 class="mb-3" v-html="item.title"></h2>
                             </v-card-title>
                             <v-card-subtitle v-if="item.subtitle">
-                                <h4 class="mb-3 black--text" v-html="item.subtitle"></h4>
+                                <h4 class="mb-3 black--text font-weight-light" v-html="item.subtitle"></h4>
                             </v-card-subtitle>
                             <v-card-text v-if="item.content">
                                 <p v-html="item.content"></p>
@@ -37,7 +37,7 @@
                                 <v-btn
                                     text
                                     color="primary"
-                                    style="font-size: 16px"
+                                    style="font-size: 16px; letter-spacing: 0"
                                 >
                                     {{ item.btnLabel }} <v-icon right small>mdi-open-in-new</v-icon>
                                 </v-btn>
@@ -73,19 +73,3 @@ export default {
     })
 }
 </script>
-<style scoped>
-    h2, h4 {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 300;
-        letter-spacing: -0.01em;
-    }
-    h2 {
-        font-size: 48px;
-        line-height: 56px;
-    }
-    h4 {
-        font-size: 30px;
-        line-height: 35px;
-    }
-</style>

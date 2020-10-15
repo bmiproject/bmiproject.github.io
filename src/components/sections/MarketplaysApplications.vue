@@ -21,9 +21,9 @@
                             to="login"
                         >
                             <v-card-title >
-                                <h3 :class="{ 'font-weight-light d-block': true, 'white--text': hover }">
+                                <h5 :class="{ 'font-weight-light d-block': true, 'white--text': hover }">
                                     {{ item.title }}
-                                </h3>
+                                </h5>
                             </v-card-title>
                             <v-divider class="mx-4 mb-2"></v-divider>
                             <v-card-text>
