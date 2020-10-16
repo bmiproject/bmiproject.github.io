@@ -1,5 +1,6 @@
 export default {
     data: () => ({
-        containerSize: '1300px'
+        containerSize: '1300px',
+        storeUrl: '/store'
     })
 }

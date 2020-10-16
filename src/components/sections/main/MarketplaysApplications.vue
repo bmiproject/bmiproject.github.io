@@ -12,14 +12,14 @@
                     <v-col 
                         :key="item.name"
                         md="3"
-                        v-for="item in applicationList"
+                        v-for="item in items"
                     >
                         <v-hover v-slot:default="{ hover }">
                             <v-card 
                                 outlined
                                 class="py-2"
                                 :style="hover ? 'background: linear-gradient(225deg, #E25405 0%, #CA0316 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF); cursor: pointer;' : ''"
-                                to="login"
+                                :to="item.link"
                             >
                                 <v-card-title >
                                     <h5 :class="{ 'font-weight-light d-block': true, 'white--text': hover }">
@@ -41,6 +41,7 @@
                                         text
                                         v-html="item.btnLabel"
                                         light
+                                        :to="item.link"
                                     >
                                     </v-btn>
                                 </v-card-actions>
@@ -55,13 +56,15 @@
 <script>
 export default {
     name: "marketplays-applications-section",
-    data: () => ({
-        applicationList: [
-            { name: 'ecommerce-store', title: 'Ecommerce Store', content: 'Vitae vitae felis euismod egestas eu urna sed. Ac, aliquam pellentesque enim nunc.', btnLabel: 'Explore' },
-            { name: 'tfp-job-listing', title: 'TFP Job Listings', content: 'Vitae vitae felis euismod egestas eu urna sed. Ac, aliquam pellentesque enim nunc.', btnLabel: 'Explore' },
-            { name: 'business-community', title: 'Business Community', content: 'Vitae vitae felis euismod egestas eu urna sed. Ac, aliquam pellentesque enim nunc.', btnLabel: 'Explore' },
-            { name: 'weekly-webinars', title: 'Weekly Webinars', content: 'Vitae vitae felis euismod egestas eu urna sed. Ac, aliquam pellentesque enim nunc.', btnLabel: 'Explore' },
-        ]
-    })
+    computed: {
+        items() {
+            return [
+                { name: 'ecommerce-store', title: 'Ecommerce Store', content: 'Vitae vitae felis euismod egestas eu urna sed. Ac, aliquam pellentesque enim nunc.', btnLabel: 'Explore', link: this.storeUrl },
+                { name: 'tfp-job-listing', title: 'TFP Job Listings', content: 'Vitae vitae felis euismod egestas eu urna sed. Ac, aliquam pellentesque enim nunc.', btnLabel: 'Explore' },
+                { name: 'business-community', title: 'Business Community', content: 'Vitae vitae felis euismod egestas eu urna sed. Ac, aliquam pellentesque enim nunc.', btnLabel: 'Explore' },
+                { name: 'weekly-webinars', title: 'Weekly Webinars', content: 'Vitae vitae felis euismod egestas eu urna sed. Ac, aliquam pellentesque enim nunc.', btnLabel: 'Explore' },
+            ]
+        }
+    }
 }
 </script>
