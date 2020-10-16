@@ -1,6 +1,6 @@
 <template>
     <section id="how-it-works-section" >
-        <v-img src="../../../assets/ecommerce/howitworks.jpg" class="pt-10 pb-15">
+        <v-img src="../../../assets/ecommerce/howitworks.jpg" class="pt-10 pb-10">
 
             <v-responsive
                 class="no-flex mx-auto"
