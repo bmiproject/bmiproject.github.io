@@ -4,18 +4,14 @@
             class="no-flex mx-auto"
             :max-width="containerSize"
         >
-            <v-row class="row1">
-                <v-col md="5" class="pt-15">
-                    <div class="images">
-                        <v-img
-                            src="../../../assets/ecommerce/info1.png"
-                            max-width="580px"
-                            class="main-image"
-                            contain
-                        ></v-img>
-                    </div>
+            <v-row class="row1 px-md-2">
+                <v-col md="6" class="pt-15">
+                    <v-img
+                        src="../../../assets/ecommerce/info1.png"
+                        max-width="580px"
+                    ></v-img>
                 </v-col>
-                <v-col md="7" class="text-center" align-self="center">
+                <v-col md="6" class="text-center" align-self="center">
                     <h3 
                         class="mx-auto mb-5"
                         style="max-width: 625px"
@@ -53,6 +49,37 @@
                     </v-responsive>
                 </v-col>
             </v-row>
+            <v-row class="px-md-2 my-15">
+                <v-col md="6">
+                    <h3>Hire for any scope</h3>
+                    <p>Sed tristique augue aliquet ultrices. Sociis habitant faucibus purus etiam. Vel viverra diam tortor ullamcorper fringilla lacus scelerisque facilisi.</p>
+                    <div 
+                        v-for="(item, index) in hireScopes"
+                        :key="index"
+                    >
+                        <div class="divider"></div>
+                        <h3 
+                            class="mt-2 mb-3"
+                            v-text="item.title"
+                        ></h3>
+                        <p v-html="item.content"></p>
+                    </div>
+                    <v-btn
+                        depressed
+                        color="primary"
+                        class="mt-5 mb-15"
+                    >
+                        Learn More
+                    </v-btn>
+                </v-col>
+                <v-col md="6">
+                    <v-img
+                        src="../../../assets/ecommerce/info2.png"
+                        max-width="610px"
+                        contain
+                    ></v-img>
+                </v-col>
+            </v-row>
         </v-responsive>
     </section>
 </template>
@@ -70,6 +97,11 @@ export default {
             { label: "Development" },
             { label: "Secretarial" },
             { label: "Finance" },
+        ],
+        hireScopes: [
+            { title: "Complex project",  content: "Id enim ullamcorper tristique sagittis scelerisque interdum justo, egestas dignissim." },
+            { title: "Longer-term contract",  content: "Varius quam nibh amet, non, integer lectus eget integer donec. Nibh etiam etiam senectus vitae." },
+            { title: "Short-term contract",  content: "In egestas velit nulla mauris sit convallis elit. Egestas eu in venenatis ullamcorper." },
         ]
     })
 }
@@ -78,4 +110,5 @@ export default {
     .v-btn { border: 0 none; border-bottom: 1px solid #CCCCCC; transition: 0.5s ease all;}
     .v-btn.hovered { border-color: #BE1E2D !important; }
     .v-btn.hovered:before, .v-btn:focus:before { opacity: 0; }
+    .divider { width: 40px; height: 5px; background: #BE1E2D; display: inline-block; }
 </style>
