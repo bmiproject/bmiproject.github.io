@@ -1,8 +1,6 @@
 <template>
 	<div id="home">
-		Ecommerce
 		<hero-section />
-		<marketplays-applications-section />
 		<sponsors-section />
 		<services-section />
 		<whats-great-section />
@@ -12,19 +10,17 @@
 </template>
 
 <script>
-import HeroSection from '@/components/sections/main/Hero'
-import MarketplaysApplicationsSection from '@/components/sections/main/MarketplaysApplications'
-import SponsorsSection from '@/components/sections/main/Sponsors'
-import ServicesSection from '@/components/sections/main/Services'
-import WhatsGreatSection from '@/components/sections/main/WhatsGreat'
-import FaqSection from '@/components/sections/main/Faq'
-import CtaSection from '@/components/sections/main/Cta'
+import HeroSection from '@/components/sections/ecommerce/Hero'
+import SponsorsSection from '@/components/sections/ecommerce/Sponsors'
+import ServicesSection from '@/components/sections/ecommerce/Services'
+import WhatsGreatSection from '@/components/sections/ecommerce/WhatsGreat'
+import FaqSection from '@/components/sections/ecommerce/Faq'
+import CtaSection from '@/components/sections/ecommerce/Cta'
 
 export default {
 	name: 'Home',
 	components: {
 		HeroSection,
-		MarketplaysApplicationsSection,
 		SponsorsSection,
 		ServicesSection,
 		WhatsGreatSection,
