@@ -26,30 +26,45 @@
                                     Thousands of people hire us to turn their ideas into reality.
                                 </p>
 
-                                <v-responsive class="no-flex mx-auto" max-width="460px">
+                                <v-responsive 
+                                    class="no-flex mx-auto" 
+                                    max-width="460px"
+                                >
                                     <v-text-field 
                                         placeholder="What skill are you looking for" 
                                         light 
                                         filled 
                                         background-color="#fff"
-                                        width="400px"
+                                        width="460px"
                                         height="50px"
                                         hide-details
-                                        outlined
+                                        class="mt-5"
                                     >
                                         <template slot="append" >
                                             <v-btn
-                                                class="mt-n5 mr-n3"
                                                 tile
                                                 color="primary"
-                                                height="60px"
+                                                height="57px"
                                                 width="54px"
                                                 depressed
+                                                style="margin-top: -18px; margin-right: -13px"
                                             >
                                                 <v-icon>mdi-magnify</v-icon>
                                             </v-btn>
                                         </template>
                                     </v-text-field>
+                                    <div class="text-center">
+                                        <v-btn 
+                                            small 
+                                            outlined
+                                            color="rgba(255, 255, 255, 0.8)"
+                                            v-for="(item, index) in categories"
+                                            :key="index"
+                                            v-html="item.label"
+                                            class="mr-3"
+                                        >
+                                        </v-btn>
+                                    </div>
                                 </v-responsive>
                             </v-col>
                         </v-row>
@@ -61,7 +76,14 @@
 </template>
 <script>
 export default {
-    name: 'hero-section'
+    name: 'hero-section',
+    data: () => ({
+        categories: [
+            { label: "Sales & marketing" },
+            { label: "Support" },
+            { label: "Accounting" },
+        ]
+    })
 }
 </script>
 <style scoped>
