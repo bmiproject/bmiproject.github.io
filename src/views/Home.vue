@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import HeroSection from '@/components/sections/Hero'
-import MarketplaysApplicationsSection from '@/components/sections/MarketplaysApplications'
-import SponsorsSection from '@/components/sections/Sponsors'
-import ServicesSection from '@/components/sections/Services'
-import WhatsGreatSection from '@/components/sections/WhatsGreat'
-import FaqSection from '@/components/sections/Faq'
-import CtaSection from '@/components/sections/Cta'
+import HeroSection from '@/components/sections/main/Hero'
+import MarketplaysApplicationsSection from '@/components/sections/main/MarketplaysApplications'
+import SponsorsSection from '@/components/sections/main/Sponsors'
+import ServicesSection from '@/components/sections/main/Services'
+import WhatsGreatSection from '@/components/sections/main/WhatsGreat'
+import FaqSection from '@/components/sections/main/Faq'
+import CtaSection from '@/components/sections/main/Cta'
 
 export default {
 	name: 'Home',

@@ -41,10 +41,10 @@ export default {
     name: 'whats-great-section',
     data: () => ({
         items: [
-            { image: require('../../assets/whatsgreat1.png'), title: 'Browse pool of talents', content: "Varius scelerisque arcu vestibulum facilisis. Pellentesque venenatis nec consequat vitae aenean." },
-            { image: require('../../assets/whatsgreat2.png'), title: 'Free webinar', content: "Vel ultrices morbi sed tellus enim sit. Etiam nunc sit tellus, enim, nulla eget nulla elementum tristique." },
-            { image: require('../../assets/whatsgreat3.png'), title: '24/7 support', content: "Etiam quis tempus dolor, id nisl vel sit. Sed mauris sed vitae rhoncus sit mauris, mus." },
-            { image: require('../../assets/whatsgreat4.png'), title: 'Pay for quality', content: "Erat interdum neque, morbi quam magna. Tincidunt in mi odio amet adipiscing pharetra etiam tortor, ipsum." },
+            { image: require('../../../assets/whatsgreat1.png'), title: 'Browse pool of talents', content: "Varius scelerisque arcu vestibulum facilisis. Pellentesque venenatis nec consequat vitae aenean." },
+            { image: require('../../../assets/whatsgreat2.png'), title: 'Free webinar', content: "Vel ultrices morbi sed tellus enim sit. Etiam nunc sit tellus, enim, nulla eget nulla elementum tristique." },
+            { image: require('../../../assets/whatsgreat3.png'), title: '24/7 support', content: "Etiam quis tempus dolor, id nisl vel sit. Sed mauris sed vitae rhoncus sit mauris, mus." },
+            { image: require('../../../assets/whatsgreat4.png'), title: 'Pay for quality', content: "Erat interdum neque, morbi quam magna. Tincidunt in mi odio amet adipiscing pharetra etiam tortor, ipsum." },
         ]
     })
 }
