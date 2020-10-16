@@ -51,7 +51,7 @@
             </v-row>
             <v-row class="px-md-2 my-15">
                 <v-col md="6">
-                    <h3>Hire for any scope</h3>
+                    <h3 class="mb-3">Hire for any scope</h3>
                     <p>Sed tristique augue aliquet ultrices. Sociis habitant faucibus purus etiam. Vel viverra diam tortor ullamcorper fringilla lacus scelerisque facilisi.</p>
                     <div 
                         v-for="(item, index) in hireScopes"

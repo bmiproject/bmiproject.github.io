@@ -1,5 +1,5 @@
 <template>
-	<v-app>
+	<v-app :class="bodyClassName">
 		<header-layout />
 		<v-main>
 			<router-view></router-view>
@@ -16,7 +16,12 @@ export default {
 	components: {
 		HeaderLayout,
 		FooterLayout
-	}
+	},
+	computed: {
+		bodyClassName() {
+			return this.$router && this.$router.currentRoute && this.$router.currentRoute.name ? this.$router.currentRoute.name.toLowerCase() : ''
+		}
+	},
 };
 </script>
 <style>

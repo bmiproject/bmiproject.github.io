@@ -12,7 +12,7 @@ const routes = [
   },
   {
     path: '/store',
-    name: 'Home',
+    name: 'Store',
     component: () => import('@/views/ecommerce/Home.vue')
   },
 ]
