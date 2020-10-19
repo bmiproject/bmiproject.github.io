@@ -5,6 +5,7 @@
 		<how-it-works-section />
 		<information-section />
 		<counters-section />
+		<testimonials-section />
 	</div>
 </template>
 
@@ -14,6 +15,7 @@ import SponsorsSection from '@/components/sections/ecommerce/Sponsors'
 import HowItWorksSection from '@/components/sections/ecommerce/HowItWorks'
 import InformationSection from '@/components/sections/ecommerce/Information'
 import CountersSection from '@/components/sections/ecommerce/Counters'
+import TestimonialsSection from '@/components/sections/ecommerce/Testimonials'
 
 export default {
 	name: 'Home',
@@ -22,7 +24,8 @@ export default {
 		SponsorsSection,
 		HowItWorksSection,
 		InformationSection,
-		CountersSection
+		CountersSection,
+		TestimonialsSection
 	}
 }
 </script>

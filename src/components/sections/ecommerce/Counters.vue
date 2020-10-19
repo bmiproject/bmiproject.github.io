@@ -1,7 +1,7 @@
 <template>
     <section id="counters-section">
         <v-responsive 
-            class="no-flex mx-auto"
+            class="no-flex mx-auto mb-n10"
             :max-width="containerSize"
         >
             <v-row>
@@ -43,3 +43,6 @@ export default {
     })
 }
 </script>
+<style scoped>
+    #counters-section { position: relative; z-index: 1000; }
+</style>
