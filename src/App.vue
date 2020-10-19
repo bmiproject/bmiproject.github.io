@@ -19,7 +19,7 @@ export default {
 	},
 	computed: {
 		bodyClassName() {
-			return this.$router && this.$router.currentRoute && this.$router.currentRoute.name ? this.$router.currentRoute.name.toLowerCase() : ''
+			return this.$route.name ? this.$route.name.toLowerCase() : ""
 		}
 	},
 };
