@@ -35,5 +35,6 @@ export default {
 	h5 { font-size: 24px; line-height: 28px; }
 	h6 { font-size: 18px; line-height: 21px; }
 	.no-flex { flex: none !important }
+	section > .v-responsive { padding-left: 15px; padding-right: 15px; }
 	#home { background: #ffffff; }
 </style>
