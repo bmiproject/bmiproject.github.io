@@ -12,7 +12,7 @@
                     <v-card
                         outlined
                         elevation="0"
-                        class="text-center"
+                        class="text-center pb-3"
                     >
                         <v-card-title>
                             <h1 
