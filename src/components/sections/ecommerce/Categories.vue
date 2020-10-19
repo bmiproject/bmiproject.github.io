@@ -19,7 +19,7 @@
                         small
                         style="font-size: 16px; color: #555"
                     >
-                        <v-icon left color="primary">mdi-arrow-right</v-icon> {{ item.label }}
+                        <v-icon left color="primary" small>mdi-arrow-right</v-icon> {{ item.label }}
                     </v-btn>
                 </v-col>
             </v-row>
