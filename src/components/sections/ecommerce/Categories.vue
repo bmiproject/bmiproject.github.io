@@ -12,11 +12,12 @@
                     md="3"
                     v-for="(item, index) in items"
                     :key="index"
+                    class="py-2"
                 >
                     <v-btn 
                         text
                         class="text-capitalize"
-                        small
+                        x-small
                         style="font-size: 16px; color: #555"
                     >
                         <v-icon left color="primary" small>mdi-arrow-right</v-icon> {{ item.label }}
