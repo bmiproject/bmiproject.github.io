@@ -6,7 +6,7 @@
         >
             <v-row>
                 <v-col cols="12" class="mt-15 mb-8 text-center">
-                    <h3>Browse top categories</h3>
+                    <h3>Browse top services</h3>
                 </v-col>
                 <v-col 
                     md="3"
@@ -29,7 +29,7 @@
 </template>
 <script>
 export default {
-    name: 'categories-section',
+    name: 'top-services-section',
     data: () => ({
         items: [
             { label: 'PHP' },
